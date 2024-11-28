@@ -1,0 +1,51 @@
+/* as you will se here we started from the top to bottom * to body then nav and then h2 and so on */
+/*css-reset */
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0.5rem; /*just to move it alittle*/
+  font-family: "Gill Sans", sans-serif;
+  text-align: center; /*to center the body or the whole content*/
+}
+nav {
+  border: 2px solid black; /*now we have border around our nav*/
+  border-radius: 2rem;
+  margin: 0 auto 1rem; /*margin top 0 , and the left and right are auto so we can center and if our page needs to be on the center and margin bottom is 1 rem*/
+  max-width: 600px; /*when we set the max width now we can se the margin auto above has worked before the width was 100%*/
+  font-size: 3rem;
+  line-height: 7rem;
+}
+h2 {
+  padding: 1rem;
+  background-color: bisque; /*here the backgound has taken the full width of the nav because h2 is a block level element that's why it's above the border radius */
+  border-radius: 2rem 2rem 0 0; /*as we see here in the parent we have border radius 2 rem so here we need to adjust he upper right and left corner 2rem the same as nav or parent*/
+}
+ul {
+  list-style-type: none; /*to remove the bullet from the list*/
+}
+li {
+  border-top: 1px solid black; /*so we can seperate each li*/
+}
+/*as you will se when i try to make hover it hovers only above the link with display block i can hover over the whole area  because a or link is an inline element*/
+li a {
+  display: block;
+}
+/* so now let's style the links that are inside our links  and we don't want to select the links that are out the navbar*/
+li a,
+li a:visited {
+  text-decoration: none; /*to remove the line under the link */
+  color: black; /* to color the link black and to also if we visited the link it remains black*/
+}
+li a:hover,
+li:focus {
+  background-color: black; /*so when we put the mouse on our link it bevomes black*/
+  color: whitesmoke; /*when it the backgound becomes black the color of font becomes whie*/
+  cursor: pointer;
+}
+li:last-child a {
+  border-radius: 0 0 2rem 2rem; /* so that the last link can get the border radius just the opposite of h2 or first elemnt in my case so the lower right and left corner has the radius of 2 rem same as the parent*/
+}
